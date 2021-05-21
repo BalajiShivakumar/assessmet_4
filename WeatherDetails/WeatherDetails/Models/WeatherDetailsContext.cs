@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace WeatherAPI.Models
+{
+    public class WeatherDetailsContext : DbContext
+    {
+        public class WeatherContext : DbContext
+        {
+            public WeatherContext(DbContextOptions<WeatherContext> options) : base(options)
+            { }
+            public DbSet<Weather> WeatherForecast { get; set; }
+        }
+    }
+}
+}
